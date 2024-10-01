@@ -1,0 +1,29 @@
+.login-form {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(
+    ellipse 90% 225% at 45% 0,
+    #b53471 10%,
+    #531889 70%,
+    #000 100%
+  );
+
+  form {
+    width: calc(100% - 2rem);
+    max-width: 30rem;
+  }
+
+  .user-loggedin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}

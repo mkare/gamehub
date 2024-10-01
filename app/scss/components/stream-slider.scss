@@ -1,0 +1,168 @@
+.stream-slider {
+  background-image: linear-gradient(
+    45deg,
+    rgba($old-violet, 0.065) 0%,
+    rgba($black, 0.135) 20%,
+    rgba($black, 0.135) 80%,
+    rgba($old-violet, 0.065) 100%
+  );
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  box-shadow: 0 0 2vw rgba($old-violet, 0.1);
+  padding: 3.5rem 1.5rem 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 3.5rem;
+
+  &__controls {
+    $space: 1.25rem;
+    $space-golden-ratio: $space * 1.61803398875;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: -1.8rem;
+    width: calc(100% + 3.6rem);
+    z-index: 1;
+
+    button {
+      font-size: 1.4rem;
+      letter-spacing: -0.25em;
+      background-color: transparent;
+      background-image: linear-gradient(
+        234deg,
+        rgba($old-violet, 0.3) 0%,
+        transparent 30%,
+        transparent 70%,
+        rgba($old-violet, 0.15) 100%
+      );
+      background-position: 0 0;
+      border: 1px solid rgba(lighten($old-violet, 10%), 0.15);
+      border-radius: $border-radius;
+      padding: $space-golden-ratio $space;
+      color: rgba(lighten($old-violet, 10%), 0.5);
+      opacity: 0.65;
+      transition: all 0.2s ease-in-out;
+      will-change: background-image, border-color, color, opacity;
+
+      &:hover {
+        opacity: 0.95;
+        text-shadow: 0 0 0.5rem rgba(black, 0.5);
+        border-color: rgba(lighten($old-violet, 10%), 0.05);
+        color: rgba(lighten($old-violet, 10%), 0.75);
+        background-image: linear-gradient(
+          234deg,
+          rgba($old-violet, 0.3) 0%,
+          transparent 20%,
+          transparent 80%,
+          rgba($old-violet, 0.15) 100%
+        );
+        background-position: -50% -50%;
+      }
+
+      &:first-child {
+        background-image: linear-gradient(
+          -234deg,
+          rgba($old-violet, 0.3) 0%,
+          transparent 30%,
+          transparent 70%,
+          rgba($old-violet, 0.15) 100%
+        );
+      }
+    }
+  }
+}
+
+.keen-slider {
+  z-index: 2;
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      display: block;
+      color: rgba(white, 0.75);
+      padding-bottom: 3.8rem;
+      max-width: 350px;
+      min-height: calc(56.25% + 3.8rem);
+      overflow: hidden;
+      text-decoration: none;
+      position: relative;
+      width: 100%;
+      z-index: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 55%;
+        left: 0;
+        top: 0;
+        background-color: rgba(black, 0.4);
+        z-index: 1;
+        transform: translateY(-100%);
+        transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: $border-radius;
+      }
+    }
+
+    .image {
+      margin-bottom: 0.8rem;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: $border-radius;
+    }
+
+    .title {
+      height: 3rem;
+      text-align: center;
+    }
+
+    .username {
+      background-color: rgba(darken($old-violet, 30%), 0.75);
+      color: rgba(lighten($old-violet, 45%), 0.75);
+      font-size: 0.9rem;
+      padding: 0.35rem 0.5rem;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: calc(100%);
+      text-shadow: 1px 1px 0 rgba(black, 0.5);
+      letter-spacing: 0.025em;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translateY(0);
+    }
+
+    .btn {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translate(-50%, -100%);
+    }
+    &:hover {
+      .username {
+        transform: translateY(-2.4rem);
+      }
+      .btn {
+        transform: translate(-50%, 150%);
+      }
+      a {
+        &::before {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  // &:not([data-keen-slider-disabled]) {
+  //   cursor: grab;
+  // }
+}

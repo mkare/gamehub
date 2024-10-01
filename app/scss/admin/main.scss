@@ -1,0 +1,30 @@
+@import "header";
+@import "dashboard";
+@import "loading";
+@import "rawg-search";
+
+.table-stats {
+  --bs-table-bg: rgba(white, 0);
+  border-color: rgba(white, 0.2);
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+.input-group-text {
+  background-color: rgba(white, 0.1);
+  border: 1px solid rgba(white, 0.2);
+  color: white;
+}
+
+.game-form {
+  position: relative;
+  .submit-btn {
+    position: absolute;
+    right: 0;
+    bottom: -3rem;
+
+    @include media-breakpoint-up(md) {
+      bottom: 2.2rem;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "gamhub",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fontsource/poppins": "^5.0.14",
+    "@reduxjs/toolkit": "^2.2.7",
+    "@sindresorhus/slugify": "^2.2.1",
+    "bootstrap": "^5.3.3",
+    "firebase": "^10.13.0",
+    "firebase-admin": "^12.3.1",
+    "formik": "^2.4.6",
+    "keen-slider": "^6.8.6",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-redux": "^9.1.2",
+    "react-toastify": "^10.0.5",
+    "sass": "^1.77.8",
+    "simple-parallax-js": "^6.0.1",
+    "slate": "^0.103.0",
+    "slate-history": "^0.109.0",
+    "slate-react": "^0.110.0",
+    "usehooks-ts": "^3.1.0",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,19 @@
+$enable-rounded: true;
+$old-purple: #531889;
+$old-violet: #3459b5;
+$old-pink: #b53471;
+$gradient-after: linear-gradient(135deg, $old-purple 10%, $old-violet 70%);
+$gradient-hero-radial: radial-gradient(
+  ellipse 90% 225% at 45% 0,
+  $old-pink 10%,
+  $old-purple 70%,
+  #000 100%
+);
+$gradient-hero-linear: linear-gradient(135deg, $old-pink 10%, $old-purple 70%);
+
+$font-family-sans-serif: "Poppins", sans-serif;
+$body-color: white;
+$body-bg: transparent;
+
+$input-border-color: rgba(255, 255, 255, 0.45);
+$input-bg: rgba(255, 255, 255, 0.2);

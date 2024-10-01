@@ -1,0 +1,107 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: radial-gradient(
+    ellipse 90% 225% at 45% 0,
+    #b53471 10%,
+    #531889 70%,
+    #000 100%
+  );
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  h1.title {
+    font-size: 12.5vw;
+    letter-spacing: -0.2vw;
+    font-weight: bold;
+    text-transform: lowercase;
+    text-shadow: 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.05);
+
+    @include media-breakpoint-up(md) {
+      font-size: 6rem;
+    }
+
+    span {
+      &:first-child {
+        margin-right: 1.5rem;
+      }
+      &:last-child {
+        position: relative;
+        z-index: 2;
+
+        &::after {
+          content: "";
+          position: absolute;
+          background: $gradient-after;
+          bottom: 20%;
+          right: 0.5%;
+          width: 98%;
+          height: 8%;
+          box-sizing: border-box;
+          z-index: -1;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  p.desc {
+    font-size: 4.75vw;
+    margin-block: 1em;
+
+    @include media-breakpoint-up(md) {
+      font-size: 2.2rem;
+      padding-left: 1rem;
+    }
+
+    a {
+      text-decoration-color: rgba(255, 255, 255, 0.5);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+      &:hover {
+        text-decoration: underline solid rgba(255, 255, 255, 0.75);
+      }
+    }
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 30rem;
+    margin-block: 2rem;
+    margin-inline: auto;
+
+    .input-group {
+      gap: 0.5rem;
+    }
+
+    .form-control {
+      background-color: rgba(39, 39, 42, 0.3);
+      border-color: rgba(255, 255, 255, 0.05);
+      border-width: 2px;
+
+      &:focus {
+        box-shadow: 0 0 0 0.25rem rgba($old-purple, 0.25);
+      }
+    }
+
+    .btn {
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.75);
+      border-color: rgba(255, 255, 255, 0.25);
+      color: darken($old-purple, 10%);
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: darken($old-purple, 20%);
+      }
+    }
+  }
+}
